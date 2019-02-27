@@ -11,8 +11,13 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "/user", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class UserController {
 
-    @Autowired
     private UserService userService;
+
+    @Autowired
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
+
 
     @PostMapping("")
     public ResponseEntity<?> createUser(@RequestBody User user) {
