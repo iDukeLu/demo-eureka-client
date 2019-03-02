@@ -1,4 +1,4 @@
-package com.idukelu.demo.demoeurekaclient.config;
+package com.idukelu.demo.demoeurekaclient.config.exception;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -13,7 +13,7 @@ import java.util.HashMap;
 @ControllerAdvice
 class GlobalExceptionHandler {
 
-    private final static Logger logger = LogManager.getLogger(GlobalExceptionHandler.class);
+    private static final Logger logger = LogManager.getLogger(GlobalExceptionHandler.class);
 
     @ExceptionHandler(value = Exception.class)
     public ResponseEntity<?> defaultErrorHandler(HttpServletRequest req, Exception e) {
