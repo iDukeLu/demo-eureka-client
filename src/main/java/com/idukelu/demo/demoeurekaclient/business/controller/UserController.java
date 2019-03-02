@@ -20,23 +20,22 @@ public class UserController {
 
 
     @PostMapping("")
-    public ResponseEntity<?> createUser(@RequestBody User user) {
+    public ResponseEntity<?> createUser(@RequestBody User user) throws Exception {
         return userService.CreateUser(user);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteUser(@PathVariable String id) {
+    public ResponseEntity<?> deleteUser(@PathVariable String id) throws Exception {
         return userService.DeleteUser(id);
     }
 
     @PutMapping("")
-    public ResponseEntity<?> updateUser(@RequestBody User user) {
+    public ResponseEntity<?> updateUser(@RequestBody User user) throws Exception {
         return userService.updateUser(user);
     }
 
     @GetMapping("")
-    public ResponseEntity<?> getUser(@RequestParam String id, @RequestParam String username) {
+    public ResponseEntity<?> getUser(@RequestParam(required = false) String id, @RequestParam(required = false) String username) throws Exception {
         return userService.getUser(id, username);
     }
-
 }
