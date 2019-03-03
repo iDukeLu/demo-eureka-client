@@ -7,12 +7,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserServiceImpl implements UserService {
-    public ResponseEntity<?> CreateUser(User user) throws Exception{
+    public ResponseEntity<?> createUser(User user) throws Exception{
         user.setId("1").setUsername("zhangsan").setPassword("1234567");
         return ResponseEntity.ok(user);
     }
 
-    public ResponseEntity<?> DeleteUser(String id) throws Exception {
+    public ResponseEntity<?> deleteUser(String id) throws Exception {
         return ResponseEntity.ok(id);
     }
 

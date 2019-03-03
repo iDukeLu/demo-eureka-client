@@ -21,12 +21,12 @@ public class UserController {
 
     @PostMapping("")
     public ResponseEntity<?> createUser(@RequestBody User user) throws Exception {
-        return userService.CreateUser(user);
+        return userService.createUser(user);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteUser(@PathVariable String id) throws Exception {
-        return userService.DeleteUser(id);
+        return userService.deleteUser(id);
     }
 
     @PutMapping("")
