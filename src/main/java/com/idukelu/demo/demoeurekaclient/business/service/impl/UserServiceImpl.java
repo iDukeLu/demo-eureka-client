@@ -21,7 +21,7 @@ public class UserServiceImpl implements UserService {
 
     public ResponseEntity<?> getUser(String id, String username) throws Exception {
         User user = new User();
-        user.setUsername(username);
+        user.setId(id).setUsername(username);
 
         return ResponseEntity.ok(user);
     }
