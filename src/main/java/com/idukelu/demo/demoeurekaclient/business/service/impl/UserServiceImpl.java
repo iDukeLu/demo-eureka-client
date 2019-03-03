@@ -29,7 +29,7 @@ public class UserServiceImpl implements UserService {
             return ResponseEntity.ok(user);
         }
 
-        if (id != null && id.equals("1")) {
+        if (id != null && id.equals("2")) {
             user.setId("2").setUsername("lisi").setPassword("1234567");
             return ResponseEntity.ok(user);
         }
