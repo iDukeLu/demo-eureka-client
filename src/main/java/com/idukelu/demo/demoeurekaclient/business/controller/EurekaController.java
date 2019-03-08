@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/user", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+@RequestMapping(value = "/eurekasvr", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class EurekaController {
 
     private EurekaService eurekaService;
