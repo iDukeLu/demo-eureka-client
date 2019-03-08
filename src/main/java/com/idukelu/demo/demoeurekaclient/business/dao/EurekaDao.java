@@ -1,4 +1,4 @@
 package com.idukelu.demo.demoeurekaclient.business.dao;
 
-public interface UserDao {
+public interface EurekaDao {
 }
