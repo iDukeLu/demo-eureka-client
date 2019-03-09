@@ -18,7 +18,6 @@ public class EurekaController {
         this.eurekaService = eurekaService;
     }
 
-
     @PostMapping("")
     public ResponseEntity<?> createUser(@RequestBody User user) throws Exception {
         return eurekaService.createUser(user);
